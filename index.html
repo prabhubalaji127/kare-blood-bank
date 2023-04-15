@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Blood Donor Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>KARE Blood Bank</h1>
+        <h4>Team Sigma</h4>
+      </div>
+    </header>
+    <nav>
+      <!-- <div class="container">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div> -->
+    </nav>
+    <div class="container">
+      <h2>Add Donor</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+        <label for="bloodGroup">Blood Group:</label>
+        <!-- <dropdown type="text" id="bloodGroup" name="bloodGroup" required /> -->
+        <select name="bloodGroup" id="bloodGroup">
+          <option value="O+ve">O+ve</option>
+          <option value="O-ve">O-ve</option>
+          <option value="A+ve">A+ve</option>
+          <option value="A-ve">A-ve</option>
+          <option value="B+ve">B+ve</option>
+          <option value="B-ve">B-ve</option>
+          <option value="AB+ve">AB+ve</option>
+          <option value="AB-ve">AB-ve</option>
+        </select>
+        <label for="contactNo">Contact Number:</label>
+        <input type="text" id="contactNo" name="contactNo" required />
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+        <input type="submit" value="Add Donor" />
+      </form>
+      <h2>Search Donor</h2>
+      <form>
+        <label for="searchBloodGroup">Search by Blood Group or Name</label>
+        <div class="searchInput">
+          <input type="text" id="searchName" name="searchName" placeholder="Enter a name to search..." />
+          <!-- <input type="text" id="searchBloodGroup" name="searchBloodGroup" placeholder="Enter a blood group to search..." /> -->
+          <select name="searchBloodGroup" id="searchBloodGroup">
+            <option value="O+ve">O+ve</option>
+            <option value="O-ve">O-ve</option>
+            <option value="A+ve">A+ve</option>
+            <option value="A-ve">A-ve</option>
+            <option value="B+ve">B+ve</option>
+            <option value="B-ve">B-ve</option>
+            <option value="AB+ve">AB+ve</option>
+            <option value="AB-ve">AB-ve</option>
+          </select>
+        </div>
+
+        <input type="submit" value="Search" />
+        <div id="searchResults"></div>
+      </form>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
